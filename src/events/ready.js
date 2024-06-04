@@ -10,7 +10,7 @@ module.exports = {
         client.user.setActivity({
             name: "Streaming Status!",
             type: ActivityType.Streaming,
-            url: "https://www.twitch.tv/discord"
+            url: "https://www.twitch.tv/discord",
         });
 
         console.log("I'm Online!");
