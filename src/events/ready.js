@@ -1,6 +1,6 @@
 const { ActivityType } = require("discord.js");
 const mongoose = require("mongoose");
-const mongoURl = process.env.mongoURL
+const mongoURL = process.env.mongoURL
 
 module.exports = {
     name: "ready",
