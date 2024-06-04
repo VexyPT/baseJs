@@ -17,7 +17,7 @@ module.exports = {
 
         if(!mongoURL) return;
 
-        await mongoose.connect(mongoURl || '', {
+        await mongoose.connect(mongoURL || '', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
