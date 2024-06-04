@@ -1,3 +1,4 @@
+const { SlashCommandBuilder } = require("@discordjs/builders");
 const { REST } = require("@discordjs/rest");
 const { Routes } = require('discord-api-types/v9');
 const fs = require('fs');
@@ -15,7 +16,12 @@ module.exports = (client) => {
             for (const file of commandFiles) {
                 const command = require(`../commands/${folder}/${file}`);
                 client.commands.set(command.data.name, command);
-                client.commandArray.push(command.data.toJSON());
+                
+                if (command.data instanceof SlashCommandBuilder) {
+                    client.commandArray.push(command.data.toJSON());
+                } else {
+                    client.commandArray.push(command.data);
+                }
             }
         }
 
