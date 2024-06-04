@@ -1,28 +1,17 @@
+const { ActivityType } = require("discord.js");
+
 module.exports = {
-    name: 'ready',
+    name: "ready",
     once: true,
     async execute(client) {
-        console.log('Ready!');
 
-        async function pickPresence () {
-            const option = Math.floor(Math.random() * statusArray.length);
+        client.user.setActivity({
+            name: "Streaming Status!",
+            type: ActivityType.Streaming,
+            url: "https://www.twitch.tv/discord"
+        });
 
-            try {
-                await client.user.setPresence({
-                    activities: [
-                        {
-                            name: statusArray[option].content,
-                            type: statusArray[option].type,
+        console.log("I'm Online!")
 
-                        },
-                    
-                    ],
-
-                    status: statusArray[option].status
-                })
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    },
-};
+    }
+}
