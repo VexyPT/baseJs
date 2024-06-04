@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  },
+  "name": "vexy-base",
+  "version": "1.0.0",
+  "description": "Handler para bot de discord em Javascript",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vexy",
+  "license": "ISC"
+}
